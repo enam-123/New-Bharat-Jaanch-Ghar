@@ -1,0 +1,2003 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+
+  <meta
+    name="viewport"
+    content="width=device-width, initial-scale=1.0"
+  >
+
+  <meta
+    name="theme-color"
+    content="#082d4d"
+  >
+
+  <meta
+    name="description"
+    content="New Bharat Jaanch Ghar — Diagnostic laboratory in Runni Saidpur, Sitamarhi, Bihar."
+  >
+
+  <link rel="manifest" href="manifest.json">
+
+  <title>New Bharat Jaanch Ghar | Runni Saidpur</title>
+
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      font-family: Arial, Helvetica, sans-serif;
+      background: #f5f8fa;
+      color: #102a43;
+      line-height: 1.6;
+    }
+
+    a {
+      text-decoration: none;
+      color: inherit;
+    }
+
+    button {
+      font: inherit;
+    }
+
+    :root {
+      --navy: #082d4d;
+      --navy2: #0d456d;
+      --cyan: #00a9c7;
+      --cyan-light: #dff8fc;
+      --gold: #d5a84c;
+      --white: #ffffff;
+      --text: #18384d;
+      --muted: #60788a;
+      --bg: #f5f8fa;
+      --border: #dce8ee;
+      --shadow: 0 18px 45px rgba(8, 45, 77, 0.10);
+    }
+
+    /* =========================
+       HEADER
+    ========================== */
+
+    header {
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+      background: rgba(8, 45, 77, 0.96);
+      backdrop-filter: blur(15px);
+      border-bottom: 1px solid rgba(255,255,255,0.12);
+    }
+
+    .nav {
+      max-width: 1200px;
+      margin: auto;
+      padding: 14px 24px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 20px;
+    }
+
+    .brand {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      color: white;
+      min-width: 0;
+    }
+
+    .brand img {
+      width: 48px;
+      height: 48px;
+      object-fit: contain;
+      border-radius: 12px;
+      background: white;
+      padding: 4px;
+    }
+
+    .brand-text {
+      min-width: 0;
+    }
+
+    .brand-text strong {
+      display: block;
+      font-size: 15px;
+      letter-spacing: 0.7px;
+    }
+
+    .brand-text span {
+      display: block;
+      font-size: 11px;
+      opacity: 0.75;
+    }
+
+    .nav-links {
+      display: flex;
+      align-items: center;
+      gap: 20px;
+    }
+
+    .nav-links a {
+      color: white;
+      font-size: 14px;
+      opacity: 0.9;
+      transition: 0.25s;
+    }
+
+    .nav-links a:hover {
+      color: #6de5f7;
+    }
+
+    .lang-btn {
+      border: 1px solid rgba(255,255,255,0.3);
+      background: rgba(255,255,255,0.08);
+      color: white;
+      border-radius: 30px;
+      padding: 8px 14px;
+      cursor: pointer;
+      transition: 0.25s;
+    }
+
+    .lang-btn:hover {
+      background: rgba(255,255,255,0.16);
+    }
+
+    /* =========================
+       HERO
+    ========================== */
+
+    .hero {
+      position: relative;
+      overflow: hidden;
+      background:
+        radial-gradient(circle at 85% 20%, rgba(0,169,199,0.22), transparent 30%),
+        linear-gradient(135deg, #06243e, #0a4266 55%, #06243e);
+      color: white;
+    }
+
+    .hero::before {
+      content: "";
+      position: absolute;
+      width: 500px;
+      height: 500px;
+      border: 1px solid rgba(255,255,255,0.08);
+      border-radius: 50%;
+      right: -180px;
+      top: -180px;
+    }
+
+    .hero::after {
+      content: "";
+      position: absolute;
+      width: 320px;
+      height: 320px;
+      border: 1px solid rgba(0,210,240,0.12);
+      border-radius: 50%;
+      left: -160px;
+      bottom: -180px;
+    }
+
+    .hero-inner {
+      max-width: 1200px;
+      margin: auto;
+      min-height: 690px;
+      padding: 80px 24px 70px;
+      display: grid;
+      grid-template-columns: 1.15fr 0.85fr;
+      align-items: center;
+      gap: 60px;
+      position: relative;
+      z-index: 2;
+    }
+
+    .eyebrow {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      padding: 7px 13px;
+      border: 1px solid rgba(255,255,255,0.2);
+      border-radius: 30px;
+      background: rgba(255,255,255,0.07);
+      color: #bcecf4;
+      font-size: 12px;
+      letter-spacing: 1px;
+      text-transform: uppercase;
+      margin-bottom: 22px;
+    }
+
+    .eyebrow::before {
+      content: "";
+      width: 7px;
+      height: 7px;
+      border-radius: 50%;
+      background: #35d5e9;
+      box-shadow: 0 0 15px #35d5e9;
+    }
+
+    .hero h1 {
+      font-size: clamp(38px, 5vw, 70px);
+      line-height: 1.03;
+      letter-spacing: -2px;
+      max-width: 760px;
+      margin-bottom: 22px;
+    }
+
+    .hero h1 span {
+      color: #5be0f0;
+    }
+
+    .hero-description {
+      color: rgba(255,255,255,0.78);
+      max-width: 680px;
+      font-size: 17px;
+      margin-bottom: 20px;
+    }
+
+    .tagline {
+      color: #f3d98b;
+      font-size: 17px;
+      font-weight: 600;
+      margin-bottom: 28px;
+    }
+
+    .hero-buttons {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 12px;
+    }
+
+    .btn {
+      display: inline-flex;
+      justify-content: center;
+      align-items: center;
+      gap: 8px;
+      padding: 13px 20px;
+      border-radius: 10px;
+      font-weight: 700;
+      font-size: 14px;
+      transition: 0.25s;
+      border: 1px solid transparent;
+      cursor: pointer;
+    }
+
+    .btn-primary {
+      background: #11b6d0;
+      color: #06243e;
+    }
+
+    .btn-primary:hover {
+      transform: translateY(-2px);
+      background: #3bd3e8;
+    }
+
+    .btn-outline {
+      border-color: rgba(255,255,255,0.25);
+      color: white;
+      background: rgba(255,255,255,0.06);
+    }
+
+    .btn-outline:hover {
+      background: rgba(255,255,255,0.13);
+      transform: translateY(-2px);
+    }
+
+    .hero-card {
+      background: rgba(255,255,255,0.09);
+      border: 1px solid rgba(255,255,255,0.15);
+      border-radius: 28px;
+      padding: 30px;
+      backdrop-filter: blur(14px);
+      box-shadow: 0 30px 70px rgba(0,0,0,0.2);
+    }
+
+    .logo-large {
+      display: flex;
+      justify-content: center;
+      margin-bottom: 25px;
+    }
+
+    .logo-large img {
+      width: min(270px, 75%);
+      aspect-ratio: 1;
+      object-fit: contain;
+      border-radius: 30px;
+      background: white;
+      padding: 15px;
+      box-shadow: 0 20px 60px rgba(0,0,0,0.18);
+    }
+
+    .hero-card h3 {
+      text-align: center;
+      font-size: 22px;
+      margin-bottom: 20px;
+    }
+
+    .quick-info {
+      display: grid;
+      gap: 12px;
+    }
+
+    .quick-item {
+      display: flex;
+      justify-content: space-between;
+      gap: 15px;
+      padding: 13px 0;
+      border-bottom: 1px solid rgba(255,255,255,0.12);
+      font-size: 14px;
+    }
+
+    .quick-item:last-child {
+      border-bottom: none;
+    }
+
+    .quick-item span:first-child {
+      color: rgba(255,255,255,0.65);
+    }
+
+    .quick-item span:last-child {
+      text-align: right;
+      font-weight: 700;
+    }
+
+    /* =========================
+       TRUST BAR
+    ========================== */
+
+    .trust-bar {
+      background: white;
+      border-bottom: 1px solid var(--border);
+    }
+
+    .trust-grid {
+      max-width: 1200px;
+      margin: auto;
+      padding: 20px 24px;
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 15px;
+    }
+
+    .trust-item {
+      padding: 15px;
+      border-right: 1px solid var(--border);
+    }
+
+    .trust-item:last-child {
+      border-right: none;
+    }
+
+    .trust-item strong {
+      display: block;
+      color: var(--navy);
+      margin-bottom: 4px;
+      font-size: 15px;
+    }
+
+    .trust-item span {
+      color: var(--muted);
+      font-size: 12px;
+    }
+
+    /* =========================
+       GENERAL SECTIONS
+    ========================== */
+
+    section {
+      padding: 95px 24px;
+    }
+
+    .container {
+      max-width: 1200px;
+      margin: auto;
+    }
+
+    .section-label {
+      color: var(--cyan);
+      text-transform: uppercase;
+      letter-spacing: 2px;
+      font-size: 12px;
+      font-weight: 800;
+      margin-bottom: 10px;
+    }
+
+    .section-title {
+      font-size: clamp(30px, 4vw, 48px);
+      line-height: 1.1;
+      color: var(--navy);
+      margin-bottom: 18px;
+      letter-spacing: -1px;
+    }
+
+    .section-intro {
+      color: var(--muted);
+      max-width: 700px;
+      font-size: 16px;
+    }
+
+    /* =========================
+       ABOUT
+    ========================== */
+
+    .about {
+      background: #f5f8fa;
+    }
+
+    .about-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 60px;
+      align-items: center;
+    }
+
+    .about-box {
+      background: white;
+      border: 1px solid var(--border);
+      border-radius: 25px;
+      padding: 35px;
+      box-shadow: var(--shadow);
+    }
+
+    .about-box p {
+      color: var(--muted);
+      margin-bottom: 18px;
+    }
+
+    .established {
+      display: inline-flex;
+      align-items: center;
+      gap: 12px;
+      margin-top: 10px;
+      padding: 12px 16px;
+      border-radius: 12px;
+      background: var(--cyan-light);
+      color: var(--navy);
+      font-weight: 700;
+    }
+
+    .about-feature {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 16px;
+    }
+
+    .feature-card {
+      background: white;
+      border: 1px solid var(--border);
+      border-radius: 18px;
+      padding: 22px;
+      transition: 0.25s;
+    }
+
+    .feature-card:hover {
+      transform: translateY(-5px);
+      box-shadow: var(--shadow);
+    }
+
+    .feature-icon {
+      width: 42px;
+      height: 42px;
+      border-radius: 12px;
+      display: grid;
+      place-items: center;
+      background: var(--cyan-light);
+      color: var(--cyan);
+      font-size: 20px;
+      margin-bottom: 14px;
+    }
+
+    .feature-card h3 {
+      font-size: 16px;
+      margin-bottom: 5px;
+      color: var(--navy);
+    }
+
+    .feature-card p {
+      color: var(--muted);
+      font-size: 13px;
+    }
+
+    /* =========================
+       SERVICES
+    ========================== */
+
+    .services {
+      background: white;
+    }
+
+    .service-grid {
+      margin-top: 45px;
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 18px;
+    }
+
+    .service-card {
+      border: 1px solid var(--border);
+      border-radius: 20px;
+      padding: 26px;
+      background: linear-gradient(145deg, #ffffff, #f8fbfc);
+      transition: 0.25s;
+    }
+
+    .service-card:hover {
+      transform: translateY(-6px);
+      box-shadow: var(--shadow);
+      border-color: #b9e7ee;
+    }
+
+    .service-number {
+      color: var(--gold);
+      font-size: 12px;
+      font-weight: 800;
+      letter-spacing: 1px;
+      margin-bottom: 15px;
+    }
+
+    .service-card h3 {
+      color: var(--navy);
+      font-size: 19px;
+      margin-bottom: 12px;
+    }
+
+    .service-card ul {
+      list-style: none;
+    }
+
+    .service-card li {
+      position: relative;
+      padding-left: 18px;
+      margin: 7px 0;
+      color: var(--muted);
+      font-size: 13px;
+    }
+
+    .service-card li::before {
+      content: "•";
+      position: absolute;
+      left: 0;
+      color: var(--cyan);
+      font-weight: bold;
+    }
+
+    /* =========================
+       TEAM
+    ========================== */
+
+    .team {
+      background: #f5f8fa;
+    }
+
+    .team-grid {
+      margin-top: 45px;
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 22px;
+    }
+
+    .team-card {
+      background: white;
+      border: 1px solid var(--border);
+      border-radius: 24px;
+      padding: 30px;
+      display: flex;
+      gap: 22px;
+      align-items: center;
+      box-shadow: 0 12px 35px rgba(8,45,77,0.05);
+    }
+
+    .team-avatar {
+      width: 85px;
+      height: 85px;
+      flex: 0 0 85px;
+      border-radius: 22px;
+      display: grid;
+      place-items: center;
+      background: linear-gradient(145deg, var(--navy), var(--cyan));
+      color: white;
+      font-size: 28px;
+      font-weight: 800;
+    }
+
+    .team-card h3 {
+      color: var(--navy);
+      font-size: 20px;
+      margin-bottom: 5px;
+    }
+
+    .qualification {
+      color: var(--cyan);
+      font-weight: 700;
+      font-size: 13px;
+      margin-bottom: 4px;
+    }
+
+    .role {
+      color: var(--muted);
+      font-size: 13px;
+    }
+
+    /* =========================
+       WHY US
+    ========================== */
+
+    .why {
+      background: white;
+    }
+
+    .why-grid {
+      margin-top: 45px;
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 16px;
+    }
+
+    .why-card {
+      padding: 28px;
+      border-radius: 20px;
+      background: #f6fafb;
+      border: 1px solid var(--border);
+    }
+
+    .why-card strong {
+      display: block;
+      color: var(--navy);
+      margin-bottom: 8px;
+    }
+
+    .why-card p {
+      color: var(--muted);
+      font-size: 13px;
+    }
+
+    /* =========================
+       HOME COLLECTION
+    ========================== */
+
+    .home-collection {
+      background:
+        linear-gradient(135deg, #06243e, #0b4b70);
+      color: white;
+    }
+
+    .collection-grid {
+      display: grid;
+      grid-template-columns: 1.2fr 0.8fr;
+      gap: 60px;
+      align-items: center;
+    }
+
+    .home-collection .section-label {
+      color: #68ddec;
+    }
+
+    .home-collection .section-title {
+      color: white;
+    }
+
+    .home-collection .section-intro {
+      color: rgba(255,255,255,0.72);
+    }
+
+    .collection-info {
+      margin-top: 25px;
+      display: grid;
+      gap: 12px;
+    }
+
+    .collection-row {
+      display: flex;
+      gap: 12px;
+      align-items: center;
+    }
+
+    .collection-row span:first-child {
+      color: #65dce9;
+      font-weight: 800;
+      min-width: 130px;
+    }
+
+    .collection-card {
+      background: rgba(255,255,255,0.08);
+      border: 1px solid rgba(255,255,255,0.15);
+      border-radius: 24px;
+      padding: 30px;
+    }
+
+    .collection-card h3 {
+      font-size: 23px;
+      margin-bottom: 12px;
+    }
+
+    .collection-card p {
+      color: rgba(255,255,255,0.72);
+      font-size: 14px;
+      margin-bottom: 22px;
+    }
+
+    /* =========================
+       CONTACT
+    ========================== */
+
+    .contact {
+      background: #f5f8fa;
+    }
+
+    .contact-grid {
+      margin-top: 45px;
+      display: grid;
+      grid-template-columns: 0.9fr 1.1fr;
+      gap: 25px;
+    }
+
+    .contact-card {
+      background: white;
+      border: 1px solid var(--border);
+      border-radius: 24px;
+      padding: 30px;
+      box-shadow: var(--shadow);
+    }
+
+    .contact-list {
+      display: grid;
+      gap: 20px;
+    }
+
+    .contact-item {
+      display: flex;
+      gap: 15px;
+    }
+
+    .contact-icon {
+      width: 43px;
+      height: 43px;
+      flex: 0 0 43px;
+      display: grid;
+      place-items: center;
+      border-radius: 12px;
+      background: var(--cyan-light);
+      color: var(--cyan);
+      font-weight: 800;
+    }
+
+    .contact-item strong {
+      display: block;
+      color: var(--navy);
+      margin-bottom: 2px;
+    }
+
+    .contact-item span {
+      color: var(--muted);
+      font-size: 13px;
+    }
+
+    .map-container {
+      min-height: 430px;
+      overflow: hidden;
+      border-radius: 24px;
+      border: 1px solid var(--border);
+      background: #dce8ee;
+      box-shadow: var(--shadow);
+    }
+
+    .map-container iframe {
+      width: 100%;
+      height: 100%;
+      min-height: 430px;
+      border: 0;
+    }
+
+    /* =========================
+       FOOTER
+    ========================== */
+
+    footer {
+      background: #041e34;
+      color: white;
+      padding: 45px 24px 25px;
+    }
+
+    .footer-inner {
+      max-width: 1200px;
+      margin: auto;
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 30px;
+      padding-bottom: 30px;
+    }
+
+    .footer-brand {
+      display: flex;
+      gap: 13px;
+      align-items: center;
+    }
+
+    .footer-brand img {
+      width: 55px;
+      height: 55px;
+      object-fit: contain;
+      background: white;
+      border-radius: 12px;
+      padding: 4px;
+    }
+
+    .footer-brand strong {
+      display: block;
+      font-size: 15px;
+    }
+
+    .footer-brand span {
+      color: rgba(255,255,255,0.55);
+      font-size: 12px;
+    }
+
+    .footer-right {
+      text-align: right;
+      color: rgba(255,255,255,0.65);
+      font-size: 13px;
+    }
+
+    .footer-bottom {
+      max-width: 1200px;
+      margin: auto;
+      padding-top: 20px;
+      border-top: 1px solid rgba(255,255,255,0.1);
+      text-align: center;
+      color: rgba(255,255,255,0.55);
+      font-size: 12px;
+    }
+
+    .footer-credit {
+      color: #68ddec;
+      margin-top: 6px;
+    }
+
+    /* =========================
+       INSTALL BUTTON
+    ========================== */
+
+    #installBtn {
+      display: none;
+      position: fixed;
+      right: 18px;
+      bottom: 18px;
+      z-index: 2000;
+      border: none;
+      background: var(--navy);
+      color: white;
+      padding: 13px 18px;
+      border-radius: 12px;
+      box-shadow: 0 12px 35px rgba(0,0,0,0.22);
+      cursor: pointer;
+      font-weight: 700;
+    }
+
+    #installBtn:hover {
+      background: var(--navy2);
+    }
+
+    /* =========================
+       MOBILE
+    ========================== */
+
+    @media (max-width: 950px) {
+
+      .nav-links a {
+        display: none;
+      }
+
+      .hero-inner {
+        grid-template-columns: 1fr;
+        min-height: auto;
+        padding-top: 65px;
+      }
+
+      .hero-card {
+        max-width: 520px;
+        margin: auto;
+        width: 100%;
+      }
+
+      .trust-grid {
+        grid-template-columns: repeat(2, 1fr);
+      }
+
+      .trust-item:nth-child(2) {
+        border-right: none;
+      }
+
+      .about-grid,
+      .collection-grid,
+      .contact-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .service-grid {
+        grid-template-columns: repeat(2, 1fr);
+      }
+
+      .why-grid {
+        grid-template-columns: repeat(2, 1fr);
+      }
+
+      .team-grid {
+        grid-template-columns: 1fr;
+      }
+    }
+
+    @media (max-width: 650px) {
+
+      .nav {
+        padding: 11px 15px;
+      }
+
+      .brand img {
+        width: 42px;
+        height: 42px;
+      }
+
+      .brand-text strong {
+        font-size: 12px;
+      }
+
+      .brand-text span {
+        display: none;
+      }
+
+      .hero-inner {
+        padding: 55px 18px 50px;
+      }
+
+      .hero h1 {
+        font-size: 40px;
+        letter-spacing: -1.5px;
+      }
+
+      .hero-description {
+        font-size: 15px;
+      }
+
+      section {
+        padding: 70px 18px;
+      }
+
+      .trust-grid {
+        grid-template-columns: 1fr;
+        padding: 12px 18px;
+      }
+
+      .trust-item {
+        border-right: none;
+        border-bottom: 1px solid var(--border);
+      }
+
+      .trust-item:last-child {
+        border-bottom: none;
+      }
+
+      .about-feature {
+        grid-template-columns: 1fr;
+      }
+
+      .service-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .why-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .team-card {
+        flex-direction: column;
+        align-items: flex-start;
+      }
+
+      .footer-inner {
+        grid-template-columns: 1fr;
+      }
+
+      .footer-right {
+        text-align: left;
+      }
+
+      .collection-row {
+        align-items: flex-start;
+        flex-direction: column;
+        gap: 3px;
+      }
+
+      .map-container,
+      .map-container iframe {
+        min-height: 350px;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <!-- =========================
+       HEADER
+  ========================== -->
+
+  <header>
+    <nav class="nav">
+
+      <a href="#home" class="brand">
+        <img src="logo.png" alt="New Bharat Jaanch Ghar Logo">
+
+        <div class="brand-text">
+          <strong>NEW BHARAT JAANCH GHAR</strong>
+          <span>Diagnostic Laboratory</span>
+        </div>
+      </a>
+
+      <div class="nav-links">
+        <a href="#about">About</a>
+        <a href="#services">Services</a>
+        <a href="#team">Team</a>
+        <a href="#home-collection">Home Collection</a>
+        <a href="#contact">Contact</a>
+
+        <button
+          class="lang-btn"
+          id="languageBtn"
+          onclick="toggleLanguage()"
+        >
+          हिं
+        </button>
+      </div>
+
+    </nav>
+  </header>
+
+
+  <!-- =========================
+       HERO
+  ========================== -->
+
+  <main id="home">
+
+    <section class="hero">
+
+      <div class="hero-inner">
+
+        <div>
+
+          <div class="eyebrow">
+            Diagnostic Laboratory • Runni Saidpur
+          </div>
+
+          <h1>
+            Reliable testing.
+            <span>Clearer healthcare.</span>
+          </h1>
+
+          <p
+            class="hero-description"
+            data-en="New Bharat Jaanch Ghar is a diagnostic laboratory serving Runni Saidpur, Sitamarhi and nearby areas with a range of routine and diagnostic laboratory investigations."
+            data-hi="न्यू भारत जाँच घर रननी सैदपुर, सीतामढ़ी और आसपास के क्षेत्रों में विभिन्न प्रकार की नियमित एवं डायग्नोस्टिक जाँच सेवाएँ प्रदान करता है।"
+          >
+            New Bharat Jaanch Ghar is a diagnostic laboratory serving Runni Saidpur,
+            Sitamarhi and nearby areas with a range of routine and diagnostic laboratory
+            investigations.
+          </p>
+
+          <div
+            class="tagline"
+            data-en="आपके स्वास्थ्य की सही पहचान, हमारी जिम्मेदारी"
+            data-hi="आपके स्वास्थ्य की सही पहचान, हमारी जिम्मेदारी"
+          >
+            आपके स्वास्थ्य की सही पहचान, हमारी जिम्मेदारी
+          </div>
+
+          <div class="hero-buttons">
+
+            <a
+              class="btn btn-primary"
+              href="tel:9162942157"
+            >
+              ☎ Call Laboratory
+            </a>
+
+            <a
+              class="btn btn-outline"
+              href="https://wa.me/919162942157"
+              target="_blank"
+              rel="noopener"
+            >
+              WhatsApp
+            </a>
+
+            <a
+              class="btn btn-outline"
+              href="https://maps.app.goo.gl/ZXMJ28QSDvYyYLSR9"
+              target="_blank"
+              rel="noopener"
+            >
+              Directions
+            </a>
+
+          </div>
+
+        </div>
+
+
+        <div class="hero-card">
+
+          <div class="logo-large">
+            <img
+              src="logo.png"
+              alt="New Bharat Jaanch Ghar"
+            >
+          </div>
+
+          <h3>Laboratory Information</h3>
+
+          <div class="quick-info">
+
+            <div class="quick-item">
+              <span>Laboratory</span>
+              <span>7:00 AM – 7:00 PM</span>
+            </div>
+
+            <div class="quick-item">
+              <span>Home Collection</span>
+              <span>7:00 AM – 5:00 PM</span>
+            </div>
+
+            <div class="quick-item">
+              <span>Phone</span>
+              <span>9162942157</span>
+            </div>
+
+            <div class="quick-item">
+              <span>Location</span>
+              <span>Runni Saidpur</span>
+            </div>
+
+          </div>
+
+        </div>
+
+      </div>
+
+    </section>
+
+
+    <!-- =========================
+         TRUST BAR
+    ========================== -->
+
+    <div class="trust-bar">
+
+      <div class="trust-grid">
+
+        <div class="trust-item">
+          <strong>Since 2008</strong>
+          <span>Established laboratory</span>
+        </div>
+
+        <div class="trust-item">
+          <strong>Diagnostic Services</strong>
+          <span>Multiple routine investigations</span>
+        </div>
+
+        <div class="trust-item">
+          <strong>Professional Team</strong>
+          <span>Laboratory & medical consultation</span>
+        </div>
+
+        <div class="trust-item">
+          <strong>Direct Contact</strong>
+          <span>Call, WhatsApp & location</span>
+        </div>
+
+      </div>
+
+    </div>
+
+
+    <!-- =========================
+         ABOUT
+    ========================== -->
+
+    <section class="about" id="about">
+
+      <div class="container">
+
+        <div class="about-grid">
+
+          <div>
+
+            <div class="section-label">
+              About the Laboratory
+            </div>
+
+            <h2 class="section-title">
+              Focused on laboratory care for the local community.
+            </h2>
+
+            <p class="section-intro">
+              New Bharat Jaanch Ghar has been serving the local area since
+              2008, providing access to routine and diagnostic laboratory
+              investigations in Runni Saidpur.
+            </p>
+
+            <div class="established">
+              ✦ Established in 2008
+            </div>
+
+          </div>
+
+
+          <div class="about-box">
+
+            <p>
+              The laboratory is located on Hospital Road, Runni Saidpur,
+              Sitamarhi, Bihar, making it convenient for people from Runni
+              Saidpur and nearby areas.
+            </p>
+
+            <p>
+              Patients can contact the laboratory directly for information
+              about available investigations, timings and home sample
+              collection.
+            </p>
+
+            <p>
+              Home sample collection is available during the specified
+              collection hours, with charges depending on distance.
+            </p>
+
+          </div>
+
+        </div>
+
+
+        <div class="about-feature" style="margin-top:30px;">
+
+          <div class="feature-card">
+            <div class="feature-icon">⌁</div>
+            <h3>Local Accessibility</h3>
+            <p>
+              Conveniently located on Hospital Road, Runni Saidpur.
+            </p>
+          </div>
+
+          <div class="feature-card">
+            <div class="feature-icon">◷</div>
+            <h3>Clear Timings</h3>
+            <p>
+              Laboratory and home collection timings are clearly displayed.
+            </p>
+          </div>
+
+          <div class="feature-card">
+            <div class="feature-icon">☎</div>
+            <h3>Direct Communication</h3>
+            <p>
+              Contact the laboratory directly by phone or WhatsApp.
+            </p>
+          </div>
+
+          <div class="feature-card">
+            <div class="feature-icon">⌖</div>
+            <h3>Easy Directions</h3>
+            <p>
+              Open the supplied Google Maps location for directions.
+            </p>
+          </div>
+
+        </div>
+
+      </div>
+
+    </section>
+
+
+    <!-- =========================
+         SERVICES
+    ========================== -->
+
+    <section class="services" id="services">
+
+      <div class="container">
+
+        <div class="section-label">
+          Laboratory Services
+        </div>
+
+        <h2 class="section-title">
+          Routine investigations, organized clearly.
+        </h2>
+
+        <p class="section-intro">
+          The following is a starter list of investigations. Please contact
+          the laboratory to confirm availability of any specific test.
+        </p>
+
+
+        <div class="service-grid">
+
+          <div class="service-card">
+            <div class="service-number">01 / HEMATOLOGY</div>
+
+            <h3>Hematology</h3>
+
+            <ul>
+              <li>CBC / Complete Blood Count</li>
+              <li>Haemoglobin</li>
+              <li>ESR</li>
+              <li>Platelet Count</li>
+              <li>Blood Group & Rh</li>
+            </ul>
+          </div>
+
+
+          <div class="service-card">
+            <div class="service-number">02 / BIOCHEMISTRY</div>
+
+            <h3>Clinical Biochemistry</h3>
+
+            <ul>
+              <li>Blood Glucose</li>
+              <li>Liver Function Tests</li>
+              <li>Kidney Function Tests</li>
+              <li>Lipid Profile</li>
+              <li>Uric Acid</li>
+            </ul>
+          </div>
+
+
+          <div class="service-card">
+            <div class="service-number">03 / THYROID</div>
+
+            <h3>Thyroid</h3>
+
+            <ul>
+              <li>TSH</li>
+              <li>T3</li>
+              <li>T4</li>
+              <li>Thyroid Profile</li>
+            </ul>
+          </div>
+
+
+          <div class="service-card">
+            <div class="service-number">04 / URINE</div>
+
+            <h3>Urine Examination</h3>
+
+            <ul>
+              <li>Routine & Microscopy</li>
+              <li>Urine Sugar</li>
+              <li>Urine Protein</li>
+              <li>Urine Pus Cells</li>
+            </ul>
+          </div>
+
+
+          <div class="service-card">
+            <div class="service-number">05 / SEROLOGY</div>
+
+            <h3>Serology</h3>
+
+            <ul>
+              <li>CRP</li>
+              <li>Widal Test</li>
+              <li>Selected Screening Tests</li>
+            </ul>
+          </div>
+
+
+          <div class="service-card">
+            <div class="service-number">06 / OTHER</div>
+
+            <h3>Other Investigations</h3>
+
+            <ul>
+              <li>Stool Examination</li>
+              <li>Electrolytes</li>
+              <li>Other routine investigations</li>
+            </ul>
+          </div>
+
+        </div>
+
+      </div>
+
+    </section>
+
+
+    <!-- =========================
+         TEAM
+    ========================== -->
+
+    <section class="team" id="team">
+
+      <div class="container">
+
+        <div class="section-label">
+          Professional Team
+        </div>
+
+        <h2 class="section-title">
+          Laboratory & medical professionals.
+        </h2>
+
+        <p class="section-intro">
+          Professional credentials displayed as provided by New Bharat
+          Jaanch Ghar.
+        </p>
+
+
+        <div class="team-grid">
+
+          <div class="team-card">
+
+            <div class="team-avatar">
+              AR
+            </div>
+
+            <div>
+              <h3>Ahmad Raza</h3>
+
+              <div class="qualification">
+                M.Sc. B.L.T.
+              </div>
+
+              <div class="role">
+                Lab In-charge
+              </div>
+            </div>
+
+          </div>
+
+
+          <div class="team-card">
+
+            <div class="team-avatar">
+              IK
+            </div>
+
+            <div>
+              <h3>Dr. Irtiza Kamal</h3>
+
+              <div class="qualification">
+                MD, PHYSICIAN
+              </div>
+
+              <div class="role">
+                Consultant Pathologist
+              </div>
+            </div>
+
+          </div>
+
+        </div>
+
+      </div>
+
+    </section>
+
+
+    <!-- =========================
+         WHY
+    ========================== -->
+
+    <section class="why">
+
+      <div class="container">
+
+        <div class="section-label">
+          Why This Laboratory
+        </div>
+
+        <h2 class="section-title">
+          Clear information. Direct access.
+        </h2>
+
+        <div class="why-grid">
+
+          <div class="why-card">
+            <strong>Easy to Reach</strong>
+            <p>
+              Located on Hospital Road in Runni Saidpur.
+            </p>
+          </div>
+
+          <div class="why-card">
+            <strong>Clear Timings</strong>
+            <p>
+              Laboratory hours are displayed clearly for visitors.
+            </p>
+          </div>
+
+          <div class="why-card">
+            <strong>Direct Communication</strong>
+            <p>
+              Contact the laboratory directly by phone or WhatsApp.
+            </p>
+          </div>
+
+          <div class="why-card">
+            <strong>Complete Information</strong>
+            <p>
+              Services, team, timings and location are available in one place.
+            </p>
+          </div>
+
+        </div>
+
+      </div>
+
+    </section>
+
+
+    <!-- =========================
+         HOME COLLECTION
+    ========================== -->
+
+    <section
+      class="home-collection"
+      id="home-collection"
+    >
+
+      <div class="container">
+
+        <div class="collection-grid">
+
+          <div>
+
+            <div class="section-label">
+              Home Sample Collection
+            </div>
+
+            <h2 class="section-title">
+              Sample collection at your home.
+            </h2>
+
+            <p class="section-intro">
+              Home sample collection is available from 7:00 AM to 5:00 PM.
+              The collection charge depends on the distance from the
+              laboratory.
+            </p>
+
+
+            <div class="collection-info">
+
+              <div class="collection-row">
+                <span>Timing</span>
+                <strong>7:00 AM – 5:00 PM</strong>
+              </div>
+
+              <div class="collection-row">
+                <span>Charge</span>
+                <strong>Depends on distance</strong>
+              </div>
+
+              <div class="collection-row">
+                <span>Booking</span>
+                <strong>Call or WhatsApp</strong>
+              </div>
+
+            </div>
+
+          </div>
+
+
+          <div class="collection-card">
+
+            <h3>Need home collection?</h3>
+
+            <p>
+              Please contact the laboratory directly. There is no online
+              booking form.
+            </p>
+
+            <div class="hero-buttons">
+
+              <a
+                class="btn btn-primary"
+                href="tel:9162942157"
+              >
+                ☎ Call Now
+              </a>
+
+              <a
+                class="btn btn-outline"
+                href="https://wa.me/919162942157"
+                target="_blank"
+                rel="noopener"
+              >
+                WhatsApp
+              </a>
+
+            </div>
+
+          </div>
+
+        </div>
+
+      </div>
+
+    </section>
+
+
+    <!-- =========================
+         CONTACT
+    ========================== -->
+
+    <section class="contact" id="contact">
+
+      <div class="container">
+
+        <div class="section-label">
+          Contact & Location
+        </div>
+
+        <h2 class="section-title">
+          Visit or contact New Bharat Jaanch Ghar.
+        </h2>
+
+        <p class="section-intro">
+          For test availability, home collection and other information,
+          please contact the laboratory directly.
+        </p>
+
+
+        <div class="contact-grid">
+
+          <div class="contact-card">
+
+            <div class="contact-list">
+
+              <div class="contact-item">
+
+                <div class="contact-icon">⌖</div>
+
+                <div>
+                  <strong>Address</strong>
+
+                  <span>
+                    Hospital Road, Runni Saidpur,
+                    Sitamarhi, Bihar
+                  </span>
+                </div>
+
+              </div>
+
+
+              <div class="contact-item">
+
+                <div class="contact-icon">☎</div>
+
+                <div>
+                  <strong>Phone</strong>
+
+                  <span>
+                    9162942157<br>
+                    9304603985
+                  </span>
+                </div>
+
+              </div>
+
+
+              <div class="contact-item">
+
+                <div class="contact-icon">WA</div>
+
+                <div>
+                  <strong>WhatsApp</strong>
+
+                  <span>
+                    9162942157
+                  </span>
+                </div>
+
+              </div>
+
+
+              <div class="contact-item">
+
+                <div class="contact-icon">◷</div>
+
+                <div>
+                  <strong>Laboratory Timing</strong>
+
+                  <span>
+                    Monday – Sunday<br>
+                    7:00 AM – 7:00 PM
+                  </span>
+                </div>
+
+              </div>
+
+
+              <div class="contact-item">
+
+                <div class="contact-icon">⌂</div>
+
+                <div>
+                  <strong>Home Collection</strong>
+
+                  <span>
+                    7:00 AM – 5:00 PM
+                  </span>
+                </div>
+
+              </div>
+
+            </div>
+
+
+            <div
+              class="hero-buttons"
+              style="margin-top:28px;"
+            >
+
+              <a
+                class="btn btn-primary"
+                href="tel:9162942157"
+              >
+                Call Laboratory
+              </a>
+
+              <a
+                class="btn"
+                style="background:#e5f9fc;color:#087c92;"
+                href="https://wa.me/919162942157"
+                target="_blank"
+                rel="noopener"
+              >
+                WhatsApp
+              </a>
+
+              <a
+                class="btn"
+                style="background:#eef3f6;color:#082d4d;"
+                href="https://maps.app.goo.gl/ZXMJ28QSDvYyYLSR9"
+                target="_blank"
+                rel="noopener"
+              >
+                Open Maps
+              </a>
+
+            </div>
+
+          </div>
+
+
+          <div class="map-container">
+
+            <iframe
+              src="https://www.google.com/maps?q=New%20Bharat%20Jaanch%20Ghar%2C%20Runni%20Saidpur%2C%20Sitamarhi%2C%20Bihar&output=embed"
+              loading="lazy"
+              allowfullscreen
+              referrerpolicy="no-referrer-when-downgrade"
+              title="New Bharat Jaanch Ghar Location"
+            ></iframe>
+
+          </div>
+
+        </div>
+
+      </div>
+
+    </section>
+
+  </main>
+
+
+  <!-- =========================
+       FOOTER
+  ========================== -->
+
+  <footer>
+
+    <div class="footer-inner">
+
+      <div class="footer-brand">
+
+        <img
+          src="logo.png"
+          alt="New Bharat Jaanch Ghar Logo"
+        >
+
+        <div>
+          <strong>NEW BHARAT JAANCH GHAR</strong>
+
+          <span>
+            Hospital Road, Runni Saidpur, Sitamarhi, Bihar
+          </span>
+        </div>
+
+      </div>
+
+
+      <div class="footer-right">
+
+        <div>
+          Laboratory: 7:00 AM – 7:00 PM
+        </div>
+
+        <div>
+          Home Collection: 7:00 AM – 5:00 PM
+        </div>
+
+      </div>
+
+    </div>
+
+
+    <div class="footer-bottom">
+
+      <div>
+        © <span id="year"></span>
+        New Bharat Jaanch Ghar. All rights reserved.
+      </div>
+
+      <div class="footer-credit">
+        This website is created by MOHAMMAD ENAM.
+      </div>
+
+    </div>
+
+  </footer>
+
+
+  <!-- =========================
+       PWA INSTALL BUTTON
+  ========================== -->
+
+  <button id="installBtn">
+    📱 Install App
+  </button>
+
+
+  <!-- =========================
+       JAVASCRIPT
+  ========================== -->
+
+  <script>
+
+    /* =========================
+       CURRENT YEAR
+    ========================== */
+
+    document.getElementById("year").textContent =
+      new Date().getFullYear();
+
+
+    /* =========================
+       LANGUAGE SWITCH
+    ========================== */
+
+    let currentLanguage = "en";
+
+    function toggleLanguage() {
+
+      currentLanguage =
+        currentLanguage === "en" ? "hi" : "en";
+
+      const elements =
+        document.querySelectorAll("[data-en]");
+
+      elements.forEach(element => {
+
+        element.textContent =
+          element.getAttribute(
+            "data-" + currentLanguage
+          );
+
+      });
+
+      document.getElementById("languageBtn").textContent =
+        currentLanguage === "en" ? "हिं" : "EN";
+
+      document.documentElement.lang =
+        currentLanguage === "en" ? "en" : "hi";
+    }
+
+
+    /* =========================
+       SERVICE WORKER
+    ========================== */
+
+    if ("serviceWorker" in navigator) {
+
+      window.addEventListener("load", () => {
+
+        navigator.serviceWorker
+          .register("./sw.js")
+          .then(() => {
+            console.log("Service Worker registered.");
+          })
+          .catch(error => {
+            console.log(
+              "Service Worker registration failed:",
+              error
+            );
+          });
+
+      });
+
+    }
+
+
+    /* =========================
+       PWA INSTALLATION
+    ========================== */
+
+    let deferredPrompt;
+
+    const installBtn =
+      document.getElementById("installBtn");
+
+
+    window.addEventListener(
+      "beforeinstallprompt",
+      event => {
+
+        event.preventDefault();
+
+        deferredPrompt = event;
+
+        installBtn.style.display = "block";
+
+      }
+    );
+
+
+    installBtn.addEventListener(
+      "click",
+      async () => {
+
+        if (!deferredPrompt) {
+          return;
+        }
+
+        deferredPrompt.prompt();
+
+        const result =
+          await deferredPrompt.userChoice;
+
+        console.log(
+          "PWA installation:",
+          result.outcome
+        );
+
+        deferredPrompt = null;
+
+        installBtn.style.display = "none";
+
+      }
+    );
+
+
+    window.addEventListener(
+      "appinstalled",
+      () => {
+
+        installBtn.style.display = "none";
+
+        console.log(
+          "New Bharat Jaanch Ghar installed."
+        );
+
+      }
+    );
+
+  </script>
+
+</body>
+</html>
